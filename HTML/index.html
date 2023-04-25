@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-4.6.2-dist/jquery-3.6.4.js"></script>
+    <script src="/bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+    <script src="/bootstrap-4.6.2-dist/js/bootstrap.bundle.js"></script>
+
+<body>
+    <h1> Tư vấn Online </h1>
+   
+    <table id="render" class="table table-bordered" class="table">
+        <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Mã bệnh nhân</th>
+                <th scope="col">Mật khẩu</th>
+                <th scope="col">Này khám</th>
+                <th scope="col">Phụ thu dịch vụ</th>
+                <th scope="col">Chuyên khoa</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+    </table>
+    <div class="d-flex ">
+        <button class="btn btn-primary">Trang chủ</button>
+        <button class="ml-4 btn btn-primary" data-toggle="modal" data-target="#mymodal">Đặt lịch</button>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="mymodal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content" style="padding: 8px;">
+                <div class="modal-header">
+                    <h4>Đặt lịch khám online</h4>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Mã bệnh nhân</h5>
+                    <input class="form-control" type="text" placeholder="Ma benh nhan" id="ma">
+                    <h5 style="color: red;">(*)BN-YYYYY</h5>
+                    <h5 class="mt-2">Mật khẩu</h5>
+                    <input class="form-control" type="password" placeholder="Mat khau" id="pass">
+                    <h5 style="color: red;">(*)</h5>
+                    <h5 class="mt-2">Ngày khám</h5>
+                    <input class="form-control" type="date" placeholder="dd/mm/yy" id="date">
+                    <h5 style="color: red;">(*)</h5>
+                    <h5>Loại dịch vụ</h5>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Checkbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Khám bệnh theo yêu cầu</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Checkbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Đều trị ngoại trú</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Checkbox3" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Khám theo yêu càu của bác sĩ</label>
+                    </div>
+                    <h5>Chuyên khoa</h5>
+                    <select class="form-select form-control" name="" id="op">
+                        <option value="Ngoại tổng quát">Ngoại tổng quát</option>
+                        <option value="Nội tổng quát">Nội tổng quát</option>
+                    </select>
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn-success" onclick="add()">Đặt lịch</button>
+                    </div>
+                    
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal -->
+    <script src="/JS/style.js"></script>
+</body>
+
+</html>
